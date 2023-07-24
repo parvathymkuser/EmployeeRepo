@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "b88e29f9-bfc7-49bf-a774-2d2f9022c2f8",
+		"name": "retail_cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Create-Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Anu\",\r\n  \"address\": \"USA\",\r\n  \"designation\": \"Software Analyst\",\r\n  \"contactNumber\": \"0987654321\",\r\n  \"email\": \"ivan1@gmail.com\",\r\n  \"annualCTC\": 4.9,\r\n  \"yearsOfExperience\": 2,\r\n  \"bloodGroup\": \"A_NEGATIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"address\": \"calicut\",\r\n    \"designation\": \"Software Engineer\",\r\n    \"contactNumber\": \"098765443222\",\r\n    \"email\": \"jo.doe@example.com\",\r\n    \"annualCTC\": 7.5,\r\n    \"yearsOfExperience\": 12,\r\n    \"bloodGroup\": \"A_POSITIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Employee-By-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-All-Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Employee-By-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Employee-By-Blood-Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details/bloodGroup?bloodGroup=AB_POSITIVE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details",
+								"bloodGroup"
+							],
+							"query": [
+								{
+									"key": "bloodGroup",
+									"value": "AB_POSITIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count-Of-Overpaid-And-Underpaid-Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details/salary_status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details",
+								"salary_status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Phone-Number",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/retail-cloud/v1/employee-details/update-phoneNumber/5/8089579767",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"retail-cloud",
+								"v1",
+								"employee-details",
+								"update-phoneNumber",
+								"5",
+								"8089579767"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
